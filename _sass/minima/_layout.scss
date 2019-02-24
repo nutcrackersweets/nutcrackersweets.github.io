@@ -2,21 +2,26 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
+  border-top: 3px solid $blurple-color-light;
+  border-bottom: 3px solid $blurple-color-light;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
+  background-color: $blurple-color;
 
   // Positioning context for the mobile navigation icon
   position: relative;
 }
 
+
 .site-title {
-  @include relative-font-size(1.625);
-  font-weight: 300;
+  @include relative-font-size(3);
+  font-weight: 500;
   letter-spacing: -1px;
-  margin-bottom: 0;
+  margin-bottom: 16px;
+  margin-top: 16px;
   float: left;
+  color: white;
+
 
   @include media-query($on-palm) {
     padding-right: 45px;
@@ -24,16 +29,17 @@
 
   &,
   &:visited {
-    color: $grey-color-dark;
+    color: white;
   }
 }
 
 .site-nav {
   position: absolute;
-  top: 9px;
+  top: 0px;
+  margin-top: 16px;
   right: $spacing-unit / 2;
-  background-color: $background-color;
-  border: 1px solid $grey-color-light;
+  background-color: $blurple-color;
+  border: 4px solid white;
   border-radius: 5px;
   text-align: right;
 
@@ -50,7 +56,7 @@
     text-align: center;
 
     > svg path {
-      fill: $grey-color-dark;
+      fill: white;
     }
   }
 
@@ -74,10 +80,11 @@
   }
 
   .page-link {
-    color: $text-color;
     line-height: $base-line-height;
     display: block;
     padding: 5px 10px;
+    color: white;
+    @include relative-font-size(1.625);
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -91,6 +98,7 @@
     float: right;
     border: none;
     background-color: inherit;
+    color: white;
 
     label[for="nav-trigger"] {
       display: none;
